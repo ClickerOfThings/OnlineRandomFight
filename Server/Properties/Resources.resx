@@ -117,20 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dodge_phrases" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>dodge_phrases.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
-  </data>
-  <data name="heal_phrases" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>heal_phrases.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
-  </data>
-  <data name="hitandheal_phrases" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>hitandheal_phrases.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
-  </data>
-  <data name="hit_phrases" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>hit_phrases.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
-  </data>
-  <data name="nothing_phrases" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>nothing_phrases.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
-  </data>
 </root>
