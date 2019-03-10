@@ -173,7 +173,7 @@ namespace Server
                                     revanche = FightProcess.Start();
                                     ReInitialize();
                                 } while (revanche);
-                                SendToAll("Второй игрок отключился. Ожидание оппонента...");
+                                SendToAll("Второй игрок отключился. Ожидание нового оппонента...");
                                 Thread.Sleep(2000);
                                 opened = true;
                                 new TcpClient().Connect(IPAddress.Loopback, port);
