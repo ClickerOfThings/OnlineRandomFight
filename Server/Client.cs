@@ -24,21 +24,21 @@ namespace Server
             id_user = id;
             id++;
             stream = client.GetStream();
-            string name;
+            string name_entered;
             using (BinaryReader br = new BinaryReader(stream, Encoding.UTF8, true))
             {
-                name = br.ReadString();
+                name_entered = br.ReadString();
             }
-            if (name == "" || name.Length < 1)
+            if (name_entered == "" || name_entered.Length < 1)
             {
                 this.name = "Воин" + id_user;
             }
             else
             {
-                this.name = name;
+                this.name = name_entered;
             }
-            Server.SendToAll(name + " подключился!");
-            fighter = new Fighter(name, this);
+            Server.SendToAll(this.name + " подключился!");
+            fighter = new Fighter(this.name, this);
             //ConnectionCheck = new Thread(this.CheckMessages);
             //ConnectionCheck.Start();
         }
