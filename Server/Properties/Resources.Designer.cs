@@ -59,5 +59,52 @@ namespace Server.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
+        internal static string dodge_phrases {
+            get {
+                return ResourceManager.GetString("dodge_phrases", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
+        internal static string heal_phrases {
+            get {
+                return ResourceManager.GetString("heal_phrases", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на {attacker}, не мешкая, ударил {defender} на {health} здоровья
+        ///{attacker} думал, с какой стороны ударить {defender}. Надумал на {health} здоровья в лоб
+        ///{defender} отчаянно пытается закрыть все удары, но {attacker} так не думает. Штраф - {health} здоровья.
+        /// </summary>
+        internal static string hit_phrases {
+            get {
+                return ResourceManager.GetString("hit_phrases", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
+        internal static string hitandheal_phrases {
+            get {
+                return ResourceManager.GetString("hitandheal_phrases", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
+        internal static string nothing_phrases {
+            get {
+                return ResourceManager.GetString("nothing_phrases", resourceCulture);
+            }
+        }
     }
 }

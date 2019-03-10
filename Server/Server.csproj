@@ -63,5 +63,20 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\dodge_phrases.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\heal_phrases.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\hit_phrases.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\hitandheal_phrases.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\nothing_phrases.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
