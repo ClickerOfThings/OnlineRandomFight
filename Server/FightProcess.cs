@@ -169,8 +169,9 @@ namespace Server
             SendToAll(string.Format("Похоже, что {0} выиграл. Поздравляем!", winner.fighterName));
             SendToAll("Еще раз?");
             List<Task> tasks = new List<Task>();
-            foreach (Client user in Server.players)
+            foreach (Fighter fighter in fighters) // bugfix: теперь считываются все 2 игрока, вместе с ливнувшим посередине игры
             {
+                Client user = fighter.user;
                 tasks.Add(Task.Run(() =>
                 {
                     user.SendToClient("replay|debug_replay");
