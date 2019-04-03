@@ -55,7 +55,6 @@ namespace Server
                     string mes = br.ReadString();
                     return mes;
                     // нет надобности в сообщениях, пока что
-                    // TODO: добавить чат
                     //string message = this.name + ": " + mes;
                     //Console.WriteLine(message);
                     //Server.SendToAll(message);

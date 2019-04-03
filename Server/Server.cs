@@ -87,7 +87,6 @@ namespace Server
             void SetMax()
             {
                 Console.WriteLine("Введите новое максимальное здоровье (пустое для стандарта - {0})", MaxHealthSet);
-                //TODO: лимит здоровья?
                 // TODO: переписать скрипт для свойства, как ниже
                 while (true)
                 {
@@ -135,10 +134,11 @@ namespace Server
         static Thread closeConnections;
         static void Listen()
         {
-            try
+            while (true)
             {
-                while (true)
+                try
                 {
+
                     Console.WriteLine("Ожидание подключения...");
                     TcpClient newplayer = listener.AcceptTcpClient();
                     if (new BinaryReader(newplayer.GetStream()).ReadString() != "notbrowser") // так как к серверу умудряется еще браузер подключаться...
@@ -188,14 +188,20 @@ namespace Server
                         }
                     }
                 }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                Console.WriteLine(e.TargetSite);
-                Console.WriteLine(e.HelpLink);
-                Console.WriteLine("Listen");
-                throw;
+
+                catch (EndOfStreamException) // путём нехитрых манипуляций сервер можно легко сломать...
+                {
+                    continue;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                    Console.WriteLine(e.Message);
+                    Console.WriteLine(e.TargetSite);
+                    Console.WriteLine(e.HelpLink);
+                    Console.WriteLine("Listen");
+                    continue;
+                }
             }
         }
 
